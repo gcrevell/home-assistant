@@ -1,20 +1,17 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: 42.292440
-  longitude: -83.684170
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 274
-  # metric for Metric, imperial for Imperial
-  unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Detroit
-  # Customization file
-  customize: !include customize.yaml
-
-# Show links to resources in log and frontend
-introduction:
+    # Name of the location where Home Assistant is running
+    name: Home
+    # Location required to calculate the time the sun rises and sets
+    latitude: 42.292440
+    longitude: -83.684170
+    # Impacts weather/sunrise data (altitude above sea level in meters)
+    elevation: 274
+    # metric for Metric, imperial for Imperial
+    unit_system: imperial
+    # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    time_zone: America/Detroit
+    # Customization file
+    customize: !include customize.yaml
 
 # Enables the frontend
 frontend:
@@ -54,11 +51,11 @@ sun:
 
 # Weather prediction
 sensor:
-  - platform: yr
+    - platform: yr
 
 # Text to speech
 tts:
-  - platform: google
+    - platform: google
 
 group: !include groups.yaml
 automation: !include automations.yaml
